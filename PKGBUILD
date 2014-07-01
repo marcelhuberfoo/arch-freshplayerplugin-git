@@ -37,7 +37,7 @@ build() {
 package() {
   cd "$srcdir/$_realname"
   install -d "$pkgdir/usr/lib/mozilla/plugins"
-  install -m644 libfreshwrapper-*.so "$pkgdir/usr/lib/mozilla/plugins"
+  install -m555 libfreshwrapper-*.so "$pkgdir/usr/lib/mozilla/plugins"
   install -Dm644 data/freshwrapper.conf.example "$pkgdir/etc/freshwrapper.conf"
     if [[ ! -n $_use_chrome ]]; then
       # configure path to libpepflashplayer.so
